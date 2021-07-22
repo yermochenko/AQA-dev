@@ -20,7 +20,7 @@ namespace lab1
             };
             foreach(var candidate in candidates)
             {
-                Console.WriteLine($"| {candidate.Id} | {candidate.FirstName, -7} | {candidate.LastName, -12} | {candidate.JobTitle, -13} | {candidate.JobDescription, -33} | {candidate.JobSalary, -7:#,# $} | {candidate.DismissalReason, -27} |");
+                Console.WriteLine($"| {candidate.Id} | {candidate.FullName, -17} | {candidate.JobTitle, -13} | {candidate.JobDescription, -33} | {candidate.JobSalary, -7:#,# $} | {candidate.DismissalReason, -27} |");
             }
         }
     }

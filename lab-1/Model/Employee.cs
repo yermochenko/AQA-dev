@@ -1,7 +1,14 @@
-﻿namespace lab1.Model
+﻿using System;
+
+namespace lab1.Model
 {
     public class Employee : User
     {
         public Company Company { get; set; }
+
+        public override void Output()
+        {
+            Console.WriteLine($"Здравствуйте, меня зовут {FullName}, я занимаю позицию \"{JobTitle}\" в компании \"{Company.Name}\" ({Company.Country}, {Company.City}, {Company.Address}) и моя зарплата {JobSalary}.");
+        }
     }
 }

@@ -18,10 +18,11 @@ namespace lab1
                 new Candidate() { Id = Guid.NewGuid(), FirstName = "Любовь",  LastName = "Сергеева",     JobTitle = "Аналитик",      JobDescription = "Senior бизнес-аналитик",            JobSalary = 3_500, DismissalReason = DismissalReason.BadTeamMicroclimate },
                 new Candidate() { Id = Guid.NewGuid(), FirstName = "Василий", LastName = "Васильев",     JobTitle = "Программист",   JobDescription = "Senior .Net fullstack разработчик", JobSalary = 4_000, DismissalReason = DismissalReason.Other }
             };
-            Console.WriteLine("***** КАНДИДАТЫ *****");
+            Console.WriteLine("***** КАНДИДАТЫ *****\n");
             foreach (var candidate in candidates)
             {
-                Console.WriteLine($"| {candidate.Id} | {candidate.FullName, -17} | {candidate.JobTitle, -13} | {candidate.JobDescription, -33} | {candidate.JobSalary, -7:#,# $} | {candidate.DismissalReason, -27} |");
+                candidate.Output();
+                Console.WriteLine();
             }
             var corporationOfGood = new Company() { Name = "Ганди & Co",        Country = "Индия",  City = "Дели",   Address = "ул. Многорукого Шивы, д. 6, корп. 6, оф. 6" };
             var corporationOfEvil = new Company() { Name = "Иван Грозный Inc.", Country = "Россия", City = "Москва", Address = "ул. Ленина, д. 13" };
@@ -40,10 +41,10 @@ namespace lab1
                 new Employee() { Id = Guid.NewGuid(), FirstName = "Амрита",   LastName = "Бхаттар",      JobTitle = "Тестировщик",   JobDescription = "Middle мануальный тестировщик",     JobSalary = 375,   Company = corporationOfGood },
                 new Employee() { Id = Guid.NewGuid(), FirstName = "Ананта",   LastName = "Варма",        JobTitle = "Программист",   JobDescription = "Middle Java fullstack разработчик", JobSalary = 500,   Company = corporationOfGood }
             };
-            Console.WriteLine("***** СОТРУДНИКИ *****");
+            Console.WriteLine("***** СОТРУДНИКИ *****\n");
             foreach (var employee in employees)
             {
-                Console.WriteLine($"| {employee.Id} | {employee.FullName,-17} | {employee.JobTitle,-13} | {employee.JobDescription,-33} | {employee.JobSalary,-7:#,# $} | компания \"{employee.Company.Name}\" ({employee.Company.Country}, {employee.Company.City}, {employee.Company.Address})");
+                employee.Output();
             }
         }
     }

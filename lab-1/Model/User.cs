@@ -1,8 +1,9 @@
-﻿using System;
+﻿using lab1.View;
+using System;
 
 namespace lab1.Model
 {
-    public abstract class User
+    public abstract class User : IConsoleOutput
     {
         public Guid Id { get; set; }
         public string FirstName { get; set; }
@@ -11,5 +12,7 @@ namespace lab1.Model
         public string JobTitle { get; set; }
         public string JobDescription { get; set; }
         public int JobSalary { get; set; }
+
+        public abstract void Output();
     }
 }

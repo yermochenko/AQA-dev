@@ -1,5 +1,6 @@
 ﻿using lab1.Generator;
 using lab1.Model;
+using lab1.View;
 using System;
 
 namespace lab1
@@ -18,12 +19,18 @@ namespace lab1
                 Console.WriteLine();
             }
 
+            Console.WriteLine("***** ОТЧЁТ ПО КАНДИДАТАМ *****");
+            new CandidateReportGenerator().OutputReport(candidates);
+
             var employees = UserFactory.NewInstance<Employee>(random.Next(10, 20));
             Console.WriteLine($"***** СОТРУДНИКИ (всего {employees.Count}) *****\n");
             foreach (var employee in employees)
             {
                 employee.Output();
             }
+
+            Console.WriteLine("***** ОТЧЁТ ПО СОТРУДНИКАМ *****");
+            new EmployeeReportGenerator().OutputReport(employees);
         }
     }
 }

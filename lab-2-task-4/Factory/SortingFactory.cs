@@ -18,7 +18,8 @@ namespace lab_2_task_4.Factory
         {
             new BubbleSortingFactory(),
             new ShakerSortingFactory(),
-            new InsertionSortingFactory()
+            new InsertionSortingFactory(),
+            new SelectionSortingFactory()
         });
 
         public static void Output()

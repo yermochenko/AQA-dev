@@ -17,7 +17,8 @@ namespace lab_2_task_4.Factory
         private static readonly List<SortingFactory> factories = new List<SortingFactory>(new SortingFactory[]
         {
             new BubbleSortingFactory(),
-            new ShakerSortingFactory()
+            new ShakerSortingFactory(),
+            new InsertionSortingFactory()
         });
 
         public static void Output()

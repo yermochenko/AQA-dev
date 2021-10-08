@@ -6,7 +6,7 @@ namespace lab1.View
 {
     public class EmployeeReportGenerator : IReportGenerator<Employee>
     {
-        public void OutputReport(List<Employee> employees)
+        public void GenerateReport(List<Employee> employees)
         {
             employees.Sort((employee1, employee2) =>
             {

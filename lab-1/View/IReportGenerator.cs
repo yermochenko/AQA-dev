@@ -5,6 +5,6 @@ namespace lab1.View
 {
     public interface IReportGenerator<T> where T : User
     {
-        void OutputReport(List<T> users);
+        void GenerateReport(List<T> users);
     }
 }

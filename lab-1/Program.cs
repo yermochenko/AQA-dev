@@ -20,7 +20,7 @@ namespace lab1
             }
 
             Console.WriteLine("***** ОТЧЁТ ПО КАНДИДАТАМ *****");
-            new CandidateReportGenerator().OutputReport(candidates);
+            new CandidateReportGenerator().GenerateReport(candidates);
 
             var employees = UserFactory.NewInstance<Employee>(random.Next(10, 20));
             Console.WriteLine($"***** СОТРУДНИКИ (всего {employees.Count}) *****\n");
@@ -30,7 +30,7 @@ namespace lab1
             }
 
             Console.WriteLine("***** ОТЧЁТ ПО СОТРУДНИКАМ *****");
-            new EmployeeReportGenerator().OutputReport(employees);
+            new EmployeeReportGenerator().GenerateReport(employees);
         }
     }
 }

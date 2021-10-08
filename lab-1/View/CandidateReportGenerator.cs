@@ -6,7 +6,7 @@ namespace lab1.View
 {
     public class CandidateReportGenerator : IReportGenerator<Candidate>
     {
-        public void OutputReport(List<Candidate> candidates)
+        public void GenerateReport(List<Candidate> candidates)
         {
             candidates.Sort((candidate1, candidate2) =>
             {

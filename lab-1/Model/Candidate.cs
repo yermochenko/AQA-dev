@@ -17,7 +17,7 @@ namespace lab1.Model
             [lab1.Model.DismissalReason.Other] = "ситуация, о которой не хотелось бы говорить"
         };
 
-        public override void Output()
+        public override void Display()
         {
             Console.WriteLine($"Здравствуйте, меня зовут {FullName}.");
             Console.WriteLine($"Я хочу работать на позиции \"{JobTitle}\" ({JobDescription}) с зарплатой от {JobSalary}.");

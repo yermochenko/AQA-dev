@@ -15,7 +15,7 @@ namespace lab1
             Console.WriteLine($"***** КАНДИДАТЫ (всего {candidates.Count}) *****\n");
             foreach (var candidate in candidates)
             {
-                candidate.Output();
+                candidate.Display();
                 Console.WriteLine();
             }
 
@@ -26,7 +26,7 @@ namespace lab1
             Console.WriteLine($"***** СОТРУДНИКИ (всего {employees.Count}) *****\n");
             foreach (var employee in employees)
             {
-                employee.Output();
+                employee.Display();
             }
 
             Console.WriteLine("***** ОТЧЁТ ПО СОТРУДНИКАМ *****");

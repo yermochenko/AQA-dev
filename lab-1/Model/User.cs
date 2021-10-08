@@ -3,7 +3,7 @@ using System;
 
 namespace lab1.Model
 {
-    public abstract class User : IConsoleOutput
+    public abstract class User : IDisplayable
     {
         public Guid Id { get; set; }
         public string FirstName { get; set; }
@@ -13,6 +13,6 @@ namespace lab1.Model
         public string JobDescription { get; set; }
         public int JobSalary { get; set; }
 
-        public abstract void Output();
+        public abstract void Display();
     }
 }
